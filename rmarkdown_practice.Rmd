@@ -1,6 +1,6 @@
 ---
-title: "Heading 1"
-author: "Heading 2"
+title: "Assignment 1: R Markdown practice"
+author: "Erjin Lee"
 date: "`r Sys.Date()`"
 documentclass: article
 geometry: margin=1in
@@ -28,53 +28,38 @@ urlcolor: blue
 <!-- Write your Markdown below this line -->
 
 
-# Heading 1
+title: "Assignment 1: R Markdown practice"
+author: "Erjin Lee"
+date: "2024-09-02"
+output: html_document
+---
 
-## Heading 2
+# Assignment 1: R Markdown practice
 
-### Heading 3
+## How the Course Works
+The weekly interactive tutorials must be completed by the start of each week. Then, each weekly assignment will be due at the end of the week.
 
-*italics* or _italics_
-**bold** or __bold__
-***bold and italicized***
+## Course Goals
+By the end of the course, students will be able to:
+- Use GitHub for creating a reproducible research document.
+- *My GitHub username is: [ErjinLeeGMU]*
+- Obtain, clean, transform, and visualize a dataset using the R programming language.
+- Interpret and predict dataset trends using statistical inference and models.
+- Critically examine and interpret statistical claims reported in mass media.
 
-* Bullet point item
-* Second item
-    * Sub-list indented by 4 spaces
-    + Different bullet point symbol
-    - Another bullet point symbol
-        - Sub-sub-list
-        
-1. Numeric list
-2. Second item
-  i. Roman numeral sub-list
-    a. A sub-sub-list
-    
-Consecutive
-lines
-become a single paragraph
+## Including Code
 
-unless you leave a blank line
-between them.
-
-[Link](https://www.google.com)
-
-Math equation: $C = 2 \pi r$
-
-Inline code: Two plus two equals `r 2+2`
-
-Use backticks to indicate a code chunk:
+### 3.1 Running R code in a code chunk
 
 ```{r}
-2 + 2
-```
+x <- 2+2
+x + 3
 
+The output of first line of code is not printed out because it is assigned to a variable instead.
+The second line of output is printed out instead, but this means that the calculated value has not
+been saved for future use.
 
-Table formatting:
-
-| Column 1 | Column 2 | Column 3 |
-|--------------|:--------:|---------:|
-| Left aligned | Centered | Right |
-| Cell 3 | Cell 4 | Cell 6 |
-
+library(ggplot2)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point()
 
